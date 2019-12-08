@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Resources\Notes as NotesResource;
 use App\Http\Resources\NotesCollection;
 use App\Models\Notes;
+use Auth;
 
 class NotesController extends Controller
 {

@@ -64,8 +64,27 @@ class AuthController extends Controller
 
     }
 
+    /**
+     * Logout
+     *
+     * @return Json REsponse
+     */
     public function logout()
     {
+    	// first pull user
+    	$user = request()->user();
+	
+    	// next null out api_token
+    	$user->api_token = null;
 
+    	// save
+    	$user->save();
+
+    	// return response
+    	return response()->json([
+    		'data' => [
+    			'message' => 'User has been logged out. Current token will no longer work'
+    		]
+    	]);
     }
 }
