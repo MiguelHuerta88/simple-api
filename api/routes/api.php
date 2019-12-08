@@ -16,8 +16,11 @@ use Illuminate\Http\Request;
 /*Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });*/
+Route::get('login', 'Api\AuthController@login')->name('login');
+Route::post('login', 'Api\AuthController@postLogin')->name('post.login');
+Route::get('logout', 'Api\AuthController@logout')->name('logout');
 
-Route::middleware(['auth:api'], function(){
-	Route::get('/notes', 'Api/NotesController@notes');
-	Route::post('/note', 'Api/NotesController@create');
+Route::middleware(['auth:api'])->group(function(){
+	Route::get('notes', 'Api\NotesController@notes');
+	Route::post('note', 'Api\NotesController@create');
 });

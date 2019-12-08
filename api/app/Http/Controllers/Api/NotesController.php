@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\Notes as NotesResource;
 use App\Http\Resources\NotesCollection;
+use App\Models\Notes;
 
 class NotesController extends Controller
 {
@@ -20,8 +21,16 @@ class NotesController extends Controller
     	return new NotesCollection(Notes::all());
     }
 
+    /**
+     * Create a note
+     *
+     * @param CreateNoteRequest  $request  The request
+     *
+     * @return NotesResource
+     */
     public function create(CreateNoteRequest $request)
     {
-
+    	// by this point validation should be valid. insert
+    	return new NotesResource(Notes::create($request->all()));
     }
 }

@@ -18,11 +18,6 @@ class CreateNotesTable extends Migration
             $table->integer('user_id');
             $table->text('notes');
             $table->timestamps();
-
-            // set up some DB level cascading
-            $table->foreign('user_id')
-              ->references('id')->on('users')
-              ->onDelete('cascade');
         });
     }
 

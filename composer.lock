@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "2545d7b2e0db0a2c79345f28d9972e45",
+    "content-hash": "b64acbcee412c6330e7616ea4f6e441b",
     "packages": [],
     "packages-dev": [
         {
             "name": "laravel/homestead",
-            "version": "v10.0.1",
+            "version": "v9.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/homestead.git",
-                "reference": "abded1035fda34475ba0e422708395830db4075a"
+                "reference": "97bdd90b2408a73651d3665083933e422e0720e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/homestead/zipball/abded1035fda34475ba0e422708395830db4075a",
-                "reference": "abded1035fda34475ba0e422708395830db4075a",
+                "url": "https://api.github.com/repos/laravel/homestead/zipball/97bdd90b2408a73651d3665083933e422e0720e5",
+                "reference": "97bdd90b2408a73651d3665083933e422e0720e5",
                 "shasum": ""
             },
             "require": {
@@ -46,11 +46,11 @@
             "authors": [
                 {
                     "name": "Taylor Otwell",
-                    "email": "taylor@laravel.com"
+                    "email": "taylorotwell@gmail.com"
                 }
             ],
             "description": "A virtual machine for web artisans.",
-            "time": "2019-12-01T20:29:11+00:00"
+            "time": "2019-11-27T00:15:26+00:00"
         },
         {
             "name": "psr/container",

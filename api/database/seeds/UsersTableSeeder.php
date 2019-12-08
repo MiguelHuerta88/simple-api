@@ -2,7 +2,6 @@
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
-use Hash;
 
 class UsersTableSeeder extends Seeder
 {
@@ -18,6 +17,7 @@ class UsersTableSeeder extends Seeder
         	'email' => 'guelme88@gmail.com',
         	'username' => 'mhuerta',
         	'password' => Hash::make('test12'),
-        	'api_token' => Str::random(80)
+        	//'api_token' => Str::random(80)
+        ]);
     }
 }
