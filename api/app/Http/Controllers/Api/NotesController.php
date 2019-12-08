@@ -8,6 +8,7 @@ use App\Http\Resources\Notes as NotesResource;
 use App\Http\Resources\NotesCollection;
 use App\Models\Notes;
 use Auth;
+use App\Http\Requests\CreateNoteRequest;
 
 class NotesController extends Controller
 {

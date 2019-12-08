@@ -13,7 +13,7 @@ class CreateNoteRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -25,7 +25,7 @@ class CreateNoteRequest extends FormRequest
     {
         return [
             'notes' => 'required',
-            'user_id' => 'required|integer|exists:user,id',
+            'user_id' => 'required|integer|exists:users,id',
         ];
     }
 }

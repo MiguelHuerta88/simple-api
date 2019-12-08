@@ -12,5 +12,7 @@ class Notes extends Model
 	 * @var string
 	 */
     public $table = 'notes';
+
+    protected $fillable = ['notes', 'user_id', 'created_at', 'updated_at'];
     
 }
