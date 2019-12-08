@@ -24,4 +24,5 @@ Route::middleware(['auth:api'])->group(function(){
 
 	Route::get('notes', 'Api\NotesController@notes');
 	Route::post('note', 'Api\NotesController@create');
+	Route::post('note/{notes}', 'Api\NotesController@update')->middleware('isOwner')->name('api.update.note');
 });

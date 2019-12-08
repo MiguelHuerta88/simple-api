@@ -9,6 +9,7 @@ use App\Http\Resources\NotesCollection;
 use App\Models\Notes;
 use Auth;
 use App\Http\Requests\CreateNoteRequest;
+use App\Http\Requests\UpdateNoteRequest;
 
 class NotesController extends Controller
 {
@@ -34,5 +35,19 @@ class NotesController extends Controller
     {
     	// by this point validation should be valid. insert
     	return new NotesResource(Notes::create($request->all()));
+    }
+
+    /**
+     * Update note
+     *
+     * @param      \App\Http\Requests\CreateNoteRequest  $request  The request
+     * @param      \App\Models\Notes                     $notes    The notes
+     */
+    public function update(UpdateNoteRequest $request, Notes $notes)
+    {
+    	// by this point we should be able to update
+    	$notes->update($request->all());
+
+    	return new NotesResource($notes);
     }
 }
